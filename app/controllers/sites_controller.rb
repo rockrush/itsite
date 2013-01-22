@@ -45,7 +45,7 @@ class SitesController < ApplicationController
 
     respond_to do |format|
       if @site.save
-        format.html { redirect_to @site, notice: 'Site was successfully created.' }
+        format.html { redirect_to action: "index", notice: 'Site was successfully created.' }
         format.json { render json: @site, status: :created, location: @site }
       else
         format.html { render action: "new" }
